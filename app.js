@@ -9,7 +9,7 @@ const notesAvailable = [2000, 500, 100, 20, 10, 5, 1];
 checkButton.addEventListener("click", function clickHandeler(){
     hideMessage();
     if(billAmount.value>0){
-        if(cashGiven.value >= billAmount.value){
+        if(parseFloat(cashGiven.value) >= parseFloat(billAmount.value) ){
             const amountToBeReturned = cashGiven.value - billAmount.value;
 
             calculateCashToBeResturned(amountToBeReturned);
